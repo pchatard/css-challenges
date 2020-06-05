@@ -1,0 +1,163 @@
+// delete the following line if no text is used
+// edit the line if you wanna use other fonts
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:700,300);
+
+// use only the available space inside the 400x400 frame
+.frame {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 400px;
+  margin-top: -200px;
+  margin-left: -200px;
+  border-radius: 2px;
+	box-shadow: 4px 8px 16px 0 rgba(0,0,0,0.1);
+	overflow: hidden;
+background: -webkit-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -moz-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: -o-linear-gradient(bottom left, #EEBE6C 0%, #CA7C4E 100%);
+  background: linear-gradient(to top right, #EEBE6C 0%, #CA7C4E 100%);
+  color: #333;
+	font-family: 'Open Sans', Helvetica, sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.center {
+	height: 299px;
+  width: 320px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+}
+
+.profile {
+	width: 60%;
+	background: #fff;
+	
+	&__photo {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		
+		&__circle {
+			
+			&-1 {
+				margin: 30px 0 20px 0;
+				border: 2px solid #786450;
+				width: 100px;
+				height: 100px;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				border-radius: 50%;
+				border-width: 1px;
+				border-style: solid;
+				border-color: #786450 #786450 #786450 transparent;
+				border-radius: 50%;
+				background: transparent;
+				
+				&:hover {
+					cursor: pointer;
+					transform: rotate(360deg);
+					transition: all .8s;
+				}
+				
+				&:hover img {
+					transform: rotate(-360deg);
+					transition: all .8s;
+				}
+			}
+			
+			&-2 {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 93%;
+				height: 93%;
+				border-width: 1px;
+				border-style: solid;
+				border-color: #786450 transparent #786450 #786450;
+				border-radius: 50%;
+				background: transparent;
+			}
+		}
+		
+		&__portrait {
+			margin: -5px;
+			width: 95%;
+			clip-path: circle();
+		}
+	}
+	
+	&__name {
+		font-size: 12px;
+		color: #786450;
+		text-align: center;
+		
+		&__principal {
+			font-size: 15px;
+			font-weight: 600;
+			display: block;
+		}
+	}
+	
+	&__actions {
+		display: flex;
+		flex-direction: column;
+		margin: 15px 0;
+		
+		&__button {
+			background: #fff;
+			border: 1px solid #786450;
+			color: #786450;
+			margin: 6px 30px;
+			padding: 6px 0;
+			border-radius: 50px;
+			font-size: 12px;
+			font-weight: 700;
+			outline: none;
+			cursor: pointer;
+			
+			&:hover {
+				background: #786450;
+				color: #fff;
+				transition: all .5s;
+			}
+		}
+	}
+}
+
+.stats {
+	width: 40%;
+	background: #F5E8DF;
+	
+	&__box {
+		height: 33%;
+		font-size: 12px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		
+		&:hover {
+			background: #E1CFC2;
+			cursor: pointer;
+		}
+		
+		&:nth-child(2) {
+			border-top: 1px solid white;
+			border-bottom: 1px solid white;
+		}
+		
+		&__number {
+			font-size: 18px;
+			color: #786450;
+			font-weight: 700;
+		}
+	}
+	
+}
